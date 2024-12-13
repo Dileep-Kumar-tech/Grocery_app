@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% block title %}About US{% endblock %} 
+{% load static %} 
+{% block content %}
+    <h2 align="center">Your Cart</h2>
+    {% comment %} {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success' %}
+                <p style="color: green">{{ message }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %} {% endcomment %}
+    {% if cart_items %}
+    <table border="1"
+           width="600px"
+           align="center"
+           cellspacing="0px">
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Total Bill</th>
+            <th>Action</th>
+        </tr>
+        {% for item in cart_items %}
+        <tr>
+            <th>
+                <img src="{{ item.product.image.url }}" alt="{{ product.name }}" width="100px">
+            </th>
+            <th>
+                {{ item.product.name }}
+            </th>    
+            <th>
+                <a href="{% url 'update_cart' item.id 'decrease' %}" style="text-decoration:none; color:black;">-</a>
+                {{ item.quantity }}
+                <a href="{% url 'update_cart' item.id 'increase' %}" style="text-decoration:none; color:black;">+</a>
+            </th>
+            <th>
+                {{ item.total_price }}
+            </th>    
+            <th>
+                <a href="{% url 'remove_from_cart' item.id %}" style="text-decoration:none; color:black;">Remove</a>
+            </th>
+        </tr>    
+        {% endfor %}
+        <tr>
+            <th colspan="4">Total: ${{ total }}</th>
+        </tr>
+    </table>        
+    {% else %}
+        <p align="center">Your cart is empty!</p>
+    {% endif %}  
+    <p align="center">
+        <a href="{% url 'home' %}" style="text-decoration:none; color:black;">Continue To Shop</a></p>
+{% endblock %}  

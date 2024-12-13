@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% block title %}About US{% endblock %} 
+{% load static %} 
+{% block content %}
+{% comment %} <link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endcomment %}
+<div class="head">
+    <section class="about-us-preview">
+        <h2>About Us</h2>
+        <p>At Fresh Produce Co., we believe in providing the highest quality fruits and vegetables directly from local farms to your table. Our mission is to promote healthy living by making fresh produce accessible to everyone.</p>
+        <a href="{% url 'home' %}"><button class="learn-more">Learn More</button></a>
+    </section>
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Fresh Produce Co. provides high-quality fruits and vegetables sourced directly from local farms.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:support@freshproduceco.com">support@freshproduceco.com</a></p>
+            <p>Phone: (+91) 9347604600</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/">
+                    <img src="{% static 'images/insta.jpeg' %}" alt="Image" width="50px">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="{% static 'images/facebook.jpeg' %}" alt="Image" width="50px">
+                </a>
+                <a href="https://www.youtube.com/">
+                    <img src="{% static 'images/youtube.png' %}" alt="Image" width="50px" height="50px">
+                </a>
+            </div>
+        </div> 
+    </div>
+</footer>
+</head>
+{% endblock %}
+  

@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block title %}Login{% endblock %} 
+{% load static %} 
+{% block content %}
+<h3 align="center">{% if messages %}
+                        {% for message in messages %}
+                          {% if message.tags == 'error' %}
+                            <p style="color: red">{{ message }}</p>
+                          {% elif message.tags == 'success' %}
+                            <p style="color: green">{{ message }}</p>
+                          {% endif %}
+                        {% endfor %}
+                    {% endif %}</h3>
+                    
+      <div class="login">
+        <form method="post">
+            {% csrf_token %}
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username" required><br>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+      </div>  
+    <h5 align="center">Don't Have Account Please ? 
+        <a href="{% url 'signin' %}" style="text-decoration:none;">signin</a>
+{% endblock %}

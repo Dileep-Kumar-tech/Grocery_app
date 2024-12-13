@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+{% block title %}Cart Details{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+</head>
+<body>
+{% block content %}
+<h3 align="center">{% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+              <p style="color: red">{{ message }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}</h3>
+<div class="signin">
+  <form method="post">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="password" required><br>
+      <input type="confirm_password" name="confirm_password" placeholder="confirm_password" required><br>
+      {% comment %} <input type="text" name="phone" placeholder="Phone" required><br>
+      <textarea name="address" placeholder="Address" required></textarea><br> {% endcomment %}
+      <button type="submit">Register</button>
+  </form>
+</div>  
+{% endblock %}
+</body>
+</html>

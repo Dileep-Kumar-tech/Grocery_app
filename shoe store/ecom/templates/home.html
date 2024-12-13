@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block title %}Home{% endblock %}
+{% load static %}
+{% block content %}
+    <section class="hero" style="background-image:url('{% static 'images/3d image.jpg' %}');">
+        <div class="hero-content">
+            <h1>Freshness Delivered to Your Doorstep!</h1>
+            <p>Discover our wide range of organic fruits and vegetables.</p>
+        </div>
+    </section> 
+
+    <h1 align="center">Welcome to Our Store</h1>
+   <div>
+        <h2>Categories</h2>
+<marquee>{% for category in categories %}
+            {{ category.name }}
+        {% endfor %}</marquee>
+    </div>
+
+    <div class="products">
+        {% for product in products %}
+            <div class="items">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h3>{{ product.name }}</h3>
+                <p>Price: ${{ product.price }}</p>
+                <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
