@@ -1,0 +1,222 @@
+body{
+    /* background: linear-gradient(45deg, blue, black); */
+    margin:none;
+    padding:none;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(136, 169, 189);
+    padding:20px;
+}
+.logo{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 30px;
+    background: linear-gradient(to right, blue, green);
+    background-clip: text;
+    color: transparent;
+}
+.text{
+    margin-left: 60px;
+    margin-top: 23px;
+    font-size: 23px;
+}
+.contact{
+    margin-left: 100px;
+    margin-top: 18px;
+    font-size: 23px;
+    border: 1px;
+    border-radius: 20px;
+    padding:10px;
+    background: linear-gradient(45deg, green, rgb(81, 81, 207));
+
+}
+.main{
+    display: flex;
+    background-color: beige;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+.main-image{
+    margin-top: 50px;
+    margin-left: 100px;
+    border: 1px;
+    border-radius: 20px;
+}
+.main-text{
+    margin-top: 140px;
+    margin-left: 50px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.menu{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgb(136, 169, 189);
+    border-radius: 20px;
+}
+.submenu1{
+    background: linear-gradient(to right, blue, green);
+    background-clip: text;
+    color: transparent;
+}
+.menu-text{
+    margin-top: 30px;
+    font-size: 40px;
+}
+.menu-text1{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.menu-text2{
+    text-align: center;
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.menu-btn{
+    text-align: center;
+    padding: 20px;
+}
+button{
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(45deg, green, rgb(81, 81, 207));
+    border: none;
+}
+button:hover{
+     transform: translatey(-5px);
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 40px;
+}
+.about::before{
+    content: "";
+    flex: 1;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+.about::after{
+    content: "";
+    flex: 1;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+.details{
+    display: flex;
+
+}
+.details-img{
+    margin-left: 250px;
+    margin-top: 150px;
+}
+.details-text{
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 200px;
+    font-size: 15px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+.grow {
+    display: flex;
+    background-color: #1f2937; 
+    border-radius: 9999px; 
+    height: 10px; 
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar {
+    background: linear-gradient(to right, #22c55e, #3b82f6); 
+    height: 10px; 
+    border-radius: 9999px; 
+    transition: transform 0.3s; 
+  }
+
+  .progress-bar:hover {
+    transform: scale(1.05); 
+  }
+
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 40px;
+}
+.activate{
+   display: flex;
+   justify-content: center;
+   gap:60px;
+}
+.title::before{
+    content: "";
+    flex: 1;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+.title::after{
+    content: "";
+    flex: 1;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+.skill1{
+    border: 1px;
+    border-radius: 20px;
+    background-color:rgb(108, 161, 193);
+    width:200px;
+    height: 300px;
+    margin-top: 70px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.skill1:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.activate1{
+    display: flex;
+    justify-content: center;
+    gap:60px;
+ }
+ .subtext1{
+    margin-top: 20px;
+ }
+
+
+ .contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 40px;
+}
+.contacts::before{
+    content: "";
+    flex: 1;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+.contacts::after{
+    content: "";
+    flex: 1;
+    border: 1px solid black;
+    margin: 0 10px;
+}
